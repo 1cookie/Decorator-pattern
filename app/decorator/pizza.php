@@ -1,8 +1,5 @@
 <?php
 
-// git remote add origin git@github.com:1cookie/Decorator-pattern.git
-// git branch --set-upstream-to=origin/master
-
 abstract Class Pizza
 {
     protected $data;
