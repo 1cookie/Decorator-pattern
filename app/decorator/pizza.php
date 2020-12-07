@@ -80,10 +80,6 @@ class Client
     {
         $this->pizza = new BasePizza();
         $this->pizza = $this->wrapPizza($this->pizza);
-
-        echo $this->pizza->getData();
-        echo "Total:\t\t$";
-        echo $this->pizza->getValue();
     }
 
     private function wrapPizza(Pizza $pizza)
@@ -92,8 +88,16 @@ class Client
         $pizza2 = new Jalapeno($pizza1);
         return $pizza2;
     }
+
+    public function getOrder()
+    {
+        echo '<pre>'.$this->pizza->getData();
+        echo "Total:\t\t$";
+        echo $this->pizza->getValue().'</pre>';
+    }
 }
 
-echo '<pre>';
 $client = new Client();
-echo '</pre>';
+$client->getOrder();
+
+
